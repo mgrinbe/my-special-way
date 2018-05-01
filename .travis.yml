@@ -9,3 +9,7 @@ services:
 
 before_install:
   - docker pull node:carbon
+
+script:
+ - yarn build
+ - yarn docker
