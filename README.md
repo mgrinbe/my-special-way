@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/dimkinv/my-special-way.svg?branch=master)](https://travis-ci.org/dimkinv/my-special-way)
 # My Special Way
 
 Lots of awesomness to be added here later.
