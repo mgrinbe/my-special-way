@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/dimkinv/my-special-way.svg?branch=master)](https://travis-ci.org/dimkinv/my-special-way)
 # My Special Way
 
 Lots of awesomness to be added here later.
@@ -6,4 +7,6 @@ Lots of awesomness to be added here later.
 
 *Reasoning: By putting an emoji you can identify the type of the commit without even reading it.*
 
+
 [My Special Way Contributer Orientation](docs/contribution.md)
+
