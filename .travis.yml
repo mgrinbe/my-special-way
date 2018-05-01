@@ -9,7 +9,10 @@ services:
 
 before_install:
   - docker pull node:carbon
+  - yarn
 
 script:
  - yarn build
  - yarn docker
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+ - yarn deploy
