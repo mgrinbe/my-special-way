@@ -7,7 +7,6 @@ Lots of awesomness to be added here later.
 
 *Reasoning: By putting an emoji you can identify the type of the commit without even reading it.*
 
-=======
 
 [My Special Way Contributer Orientation](docs/contribution.md)
 
