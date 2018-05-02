@@ -2,9 +2,7 @@ language: node_js
 node_js:  stable
 
 notifications:
-  slack:
-    secure: 8Ik+B+CPmpZo+3Ocn9w9+LoBMVMmWUoLSUbRjgErNHNjVxNOudw+65YhqSeFbl6dwRdxcVt5i0UntVPmUlrdlHwSxPuxu2mA30oQLJ4gGI40dK+qtxCmLCVtSCwmiuvfgyZXOG8Q58mPUsI7J8KxIiULoIBEHCKcboOz56yLUnltPjngHx8XVxvxD2H+MKy0QCkrh+4XLM+ALqHvJUgF3UVuVZkcoPMLCbE4LYKdGBCieOt2PivqdZTBMvzCpLgeNpNvEjXELBJ1eOHWeEd0ZbOc62V7YAWTtpsZJWdLJwnvQcmfCEcHGJRBc2Qrg5+LBnBYhnQl7KU+Tq/pbZs9EG3zdkhm2qwYpUnHqLM34vG7S2yywlpNtJi8Ubt3blE4WEuTR7ZcqRcTypE7ts6c/V6Pm/q0p+htH9FASRwHDTQgfPMxSRfstkDMezbzwPnkIIXLJ2gFGa8Mh+VlOWHl0LsHPqSDDKdhKF44bkQhZUTf6I9OXmn28kQiZFjbhAN+lBlkcGypPI/Ub5q6eSIDV99bueUD9wFxhOVeUa4R3e2XK8jzcOmurioovOziyOTheNzpc4Cx9zXwAAUY1dgAc8p4ZiApjUxjxbM7cOBHywHZfmx2/2MnnWJ/I/qa2Vzk7QJErUyD5dd0fwLNDAmdOeHYH3f0JN0yze8c+4GDPEg=
-
+   slack: myspecialway:3s58KKj8R7El4OKWC1xtnZbK
 
 services:
   - docker
@@ -18,7 +16,6 @@ before_script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
- - lerna run test
  - yarn build
  - yarn docker
  - yarn deploy
