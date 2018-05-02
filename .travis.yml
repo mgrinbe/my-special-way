@@ -1,7 +1,8 @@
+dist:trusty
 language: node_js
 node_js:  stable
 
-sudo: required
+sudo: false
 
 addons:
   apt:
@@ -9,7 +10,7 @@ addons:
      - google-chrome
     packages:
      -google-chrome-stable
-  chrome: stable
+
   
 notifications:
    slack: myspecialway:3s58KKj8R7El4OKWC1xtnZbK
