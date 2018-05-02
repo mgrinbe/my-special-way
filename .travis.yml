@@ -25,7 +25,8 @@ before_script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
- - lerna run test
+ - lerna run ci-test
+ - lerna run ci-e2e
  - yarn build
  - yarn docker
  - yarn deploy

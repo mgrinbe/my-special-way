@@ -12,8 +12,10 @@
     "start:prod": "node dist/main.js",
     "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "test": "jest --maxWorkers=4",
+	"ci-test": "jest --maxWorkers=4",
     "test:cov": "jest --coverage",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "e2e": "jest --config ./test/jest-e2e.json",
+	"ci-e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",
