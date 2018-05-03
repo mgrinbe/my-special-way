@@ -1,6 +1,6 @@
 {
   "name": "msw-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
@@ -14,7 +14,8 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "bump": "yarn version --new-version patch"
+    "bump": "yarn version --new-version patch",
+    "commitbump": "git commit -am \"version bumped to $(../../scripts/echo-version ./package.json)\""
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",
