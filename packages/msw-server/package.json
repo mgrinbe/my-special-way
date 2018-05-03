@@ -13,7 +13,8 @@
     "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "test": "jest",
     "test:cov": "jest --coverage",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "bump": "yarn version --new-version patch"
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",
