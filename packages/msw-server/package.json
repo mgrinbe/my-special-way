@@ -11,11 +11,11 @@
     "docker": "docker build . -t myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "start:prod": "node dist/main.js",
     "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
-    "test": "jest --maxWorkers=4",
-	"ci-test": "jest --maxWorkers=4",
+    "test": "jest --maxWorkers=4 ",
+    "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=text-lcov | coveralls",
     "test:cov": "jest --coverage",
-    "e2e": "jest --config ./test/jest-e2e.json",
-	"ci-e2e": "jest --config ./test/jest-e2e.json"
+    "e2e": "jest --config ./test/jest-e2e.json ",
+    "ci-e2e": "jest --config ./test/jest-e2e.json "
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",
@@ -39,7 +39,8 @@
     "ts-jest": "^21.2.4",
     "ts-node": "^4.1.0",
     "tsconfig-paths": "^3.1.1",
-    "tslint": "5.3.2"
+    "tslint": "5.3.2",
+    "coveralls": "^3.0.0"
   },
   "jest": {
     "moduleFileExtensions": [
