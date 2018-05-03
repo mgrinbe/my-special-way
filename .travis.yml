@@ -2,13 +2,9 @@ dist: trusty
 language: node_js
 node_js:  stable
 
-sudo: required
-
-
 addons:
   chrome: stable
 
-  
 notifications:
    slack: myspecialway:3s58KKj8R7El4OKWC1xtnZbK
    email: false
