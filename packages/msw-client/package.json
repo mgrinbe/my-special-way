@@ -6,9 +6,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test --watch=false",
+    "ci-test": "ng test --watch=false --config karma.ci.conf.js",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ci-e2e": "ng e2e --config protractor.ci.conf.js"
   },
   "private": true,
   "dependencies": {
