@@ -12,9 +12,6 @@ notifications:
 services:
   - docker
 
-before_install:
-  - docker pull node:carbon
-
 before_script:
   - yarn global add lerna 
   - lerna bootstrap
@@ -24,5 +21,8 @@ script:
  - lerna run ci-test
  - lerna run ci-e2e
  - yarn build
+
+after_success:
+ - docker pull node:carbon
  - yarn docker
  - yarn deploy
