@@ -11,10 +11,13 @@
     "docker": "docker build . -t myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "start:prod": "node dist/main.js",
     "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
-    "test": "jest",
+    "test": "jest --maxWorkers=4 ",
+    "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=text-lcov | coveralls",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "bump": "yarn version --new-version patch"
+    "e2e": "jest --config ./test/jest-e2e.json ",
+    "ci-e2e": "jest --config ./test/jest-e2e.json "
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",
@@ -38,6 +41,7 @@
     "ts-node": "^4.1.0",
     "tsconfig-paths": "^3.1.1",
     "tslint": "5.3.2",
+    "coveralls": "^3.0.0"
     "typescript": "^2.6.2"
   },
   "jest": {
