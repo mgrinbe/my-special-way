@@ -7,6 +7,6 @@
 		"bump": "lerna run bump",
 		"docker": "lerna run docker",
 		"deploy": "lerna run deploy",
-		"push": "leran run push"
+		"push": "lerna run push"
 	}
 }
