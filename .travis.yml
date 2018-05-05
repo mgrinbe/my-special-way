@@ -24,5 +24,7 @@ script:
 
 after_success:
  - docker pull node:carbon
+ - yarn bump
  - yarn docker
  - yarn deploy
+ - yarn push
