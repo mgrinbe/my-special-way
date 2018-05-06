@@ -15,7 +15,8 @@
     "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov",
     "test:cov": "jest --coverage",
     "e2e": "jest --config ./test/jest-e2e.json ",
-    "ci-e2e": "jest --rootDir=. --testRegex=.e2e-spec.ts$ --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov"
+    "ci-e2e": "jest --rootDir=. --testRegex=.e2e-spec.ts$ --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov",
+    "tslint":"./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",

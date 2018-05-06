@@ -10,7 +10,8 @@
     "ci-test": "ng test --watch=false --config karma.ci.conf.js --code-coverage && ./node_modules/.bin/codecov",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ci-e2e": "ng e2e --config protractor.ci.conf.js "
+    "ci-e2e": "ng e2e --config protractor.ci.conf.js ",
+    "tslint":"./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
   },
   "private": true,
   "dependencies": {
@@ -46,7 +47,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
-    "tslint": "~5.9.1",
+    "tslint": "^5.10.0",
     "typescript": "~2.5.3"
   }
 }
