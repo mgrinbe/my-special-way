@@ -7,11 +7,10 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test --watch=false",
-    "ci-test": "ng test --watch=false --config karma.ci.conf.js --code-coverage && ./node_modules/.bin/codecov -c -f clientUT",
+    "ci-test": "ng test --watch=false --config karma.ci.conf.js --code-coverage && ./node_modules/.bin/codecov",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ci-e2e": "ng e2e --config protractor.ci.conf.js ",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "ci-e2e": "ng e2e --config protractor.ci.conf.js "
   },
   "private": true,
   "dependencies": {

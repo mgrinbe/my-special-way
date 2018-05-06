@@ -12,10 +12,10 @@
     "start:prod": "node dist/main.js",
     "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "test": "jest --maxWorkers=4 ",
-    "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov -c -F unittests",
+    "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov",
     "test:cov": "jest --coverage",
     "e2e": "jest --config ./test/jest-e2e.json ",
-    "ci-e2e": "jest --rootDir=. --testRegex=.e2e-spec.ts$ --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov  -c -F api_tests"
+    "ci-e2e": "jest --rootDir=. --testRegex=.e2e-spec.ts$ --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov"
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",
