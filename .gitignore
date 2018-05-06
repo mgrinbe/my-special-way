@@ -1,2 +1,7 @@
 node_modules
 lerna-debug.log
+yarn-error.log
+packages/msw-server/coverage/coverage.test
+lcov.info
+.vscode
+coverage

@@ -175,9 +175,6 @@ _TeamCity*
 .axoCover/*
 !.axoCover/settings.json
 
-# Visual Studio code coverage results
-*.coverage
-*.coveragexml
 
 # NCrunch
 _NCrunch_*
@@ -355,7 +352,7 @@ __pycache__/
 
 # OpenCover UI analysis results
 OpenCover/
-coverage/
+
 
 ### macOS template
 # General
@@ -391,3 +388,7 @@ docker-compose.yml
 .env
 
 dist/
+
+#Coverage
+lcov.*
+Coverage

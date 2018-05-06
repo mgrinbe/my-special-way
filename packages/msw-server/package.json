@@ -12,10 +12,10 @@
     "start:prod": "node dist/main.js",
     "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "test": "jest --maxWorkers=4 ",
-    "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=text-lcov | coveralls",
+    "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov -c -F unittests",
     "test:cov": "jest --coverage",
     "e2e": "jest --config ./test/jest-e2e.json ",
-    "ci-e2e": "jest --config ./test/jest-e2e.json "
+    "ci-e2e": "jest --rootDir=. --testRegex=.e2e-spec.ts$ --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov  -c -F api_tests"
   },
   "dependencies": {
     "@nestjs/common": "^4.5.9",
@@ -27,11 +27,11 @@
     "rxjs": "^5.5.6"
   },
   "devDependencies": {
-    "typescript": "^2.6.2",
     "@types/express": "^4.0.39",
     "@types/jest": "^21.1.8",
     "@types/node": "^9.3.0",
     "@types/supertest": "^2.0.4",
+    "codecov": "^3.0.1",
     "jest": "^21.2.1",
     "nodemon": "^1.14.1",
     "prettier": "^1.11.1",
@@ -40,7 +40,7 @@
     "ts-node": "^4.1.0",
     "tsconfig-paths": "^3.1.1",
     "tslint": "5.3.2",
-    "coveralls": "^3.0.0"
+    "typescript": "^2.6.2"
   },
   "jest": {
     "moduleFileExtensions": [
