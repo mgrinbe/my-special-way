@@ -22,6 +22,7 @@ before_script:
 script:
  - lerna run ci-test
  - lerna run ci-e2e
+ - lerna run tslint
  - yarn build
 
 after_success:
