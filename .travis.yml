@@ -6,8 +6,10 @@ addons:
   chrome: stable
 
 notifications:
-   slack: myspecialway:3s58KKj8R7El4OKWC1xtnZbK
-   email: false
+  email: false
+  slack:
+    rooms:
+      secure: F352vjEmgozSquQY/s7q1SglmprpNx8FewU12MFpekDb+l+LqUCdpwoMjhkP8UmPregApYvBP8LHDGFvlXjrh9CqyLuq0S8iypWIsX8df+dOYdpcBu1RBkLW9lqLPH/HDH4kVQAcFeiIpGE6KcYbMK6ozCCIMlfFSZtqQMbzNdVOd+GsXT6or5eZnnvnqMl1Qdpw509AfyT4ryb8qr9UIuqKBiGxogqTtiREUVQiALFIiXhLo8QjniQtdYfMEykBPw5KNiE1ZycwODpkJvhviHrzNyC9uU2HY7r4owxvUnz4sSloakVZAo7J4QrraoK+RYszm0kmBvcy8dHP6YPDUhLUVlj0cKRdUBqI4Rr49zpadbQ0aTVMwOr3rJ5oDfozxe3TaH7nMF/Vi6Z0ZuAI+AmtQAx/Ely10NIAR9FQrMjZnNFH+GVTVRmt9eL3algILOGvtSu490WmzuhZvdH1TD1Wh8EUq0u8Mg/yrFzKNEDajza9FDaqzYK0fI63FYqlUUYUeVTY7ci233MQbRE+UNGvE66dS+CGksi9aJMahaR44fU/VeCgItPDtSR8SBoyA5XvwWOrIwICP7fsCYETWEKuWpSkecPpOlv93y6jXKwRAfDTgk/mFXI3tGfZgI3JAqCtIOLiV+abURY3Vi0pLn4QlHgVJcTM2cG7i16zDJM=
 
 services:
   - docker
