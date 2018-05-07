@@ -1,10 +1,17 @@
 {
 	"devDependencies": {
-		"lerna": "^2.11.0"
+		"lerna": "^2.11.0",
+		"now": "^11.1.7"
 	},
 	"scripts": {
 		"build": "lerna run build",
 		"docker": "lerna run docker",
-		"deploy": "lerna run deploy"
-	}
+		"deploy": "lerna run deploy",
+		"deploynow": "now --token $NOW_TOKEN --team Msw",
+		"alias": "now alias --token=$NOW_TOKEN --team Msw"
+	},
+	"now": {
+		"name": "msw",
+		"alias": "my-special-way"
+		}
 }

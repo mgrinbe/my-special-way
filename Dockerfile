@@ -1,0 +1,1 @@
+FROM myspecialway/msw-server:latest
