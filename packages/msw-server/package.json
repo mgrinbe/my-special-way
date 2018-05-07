@@ -11,6 +11,8 @@
     "docker": "docker build . -t myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "start:prod": "node dist/main.js",
     "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
+    "deploynow": "now --token $NOW_TOKEN ",
+    "alias": "now alias --token=$NOW_TOKEN",
     "test": "jest --maxWorkers=4 ",
     "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov",
     "test:cov": "jest --coverage",
@@ -54,6 +56,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
-    "coverageDirectory": "../coverage"
+    "coverageDirectory": "../coverage",
+
+    "now": {
+      "name": "msw",
+      "alias": "Msw.com"
+      }
   }
 }
