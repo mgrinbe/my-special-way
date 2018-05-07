@@ -7,8 +7,8 @@
 		"build": "lerna run build",
 		"docker": "lerna run docker",
 		"deploy": "lerna run deploy",
-		"deploynow": "now --token $NOW_TOKEN",
-		"alias": "now alias --token=$NOW_TOKEN"
+		"deploynow": "now --token $NOW_TOKEN --docker",
+		"alias": "now alias --token=$NOW_TOKENcd "
 	},
 	"now": {
 		"name": "msw",
