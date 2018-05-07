@@ -1,1 +1,1 @@
-FROM myspecialway/msw-server:latest
+FROM myspecialway/msw-server
