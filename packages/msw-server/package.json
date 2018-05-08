@@ -10,7 +10,7 @@
     "build": "rm -rf dist && tsc",
     "docker": "docker build . -t myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "start:prod": "node dist/main.js",
-    "deploy": "docker tag myspecialway/msw-server:latest myspecialway/msw-server:$(../../scripts/echo-version ./package.json) && docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json) && docker push myspecialway/msw-server:latest",
+    "deploy": "docker push myspecialway/msw-server:$(../../scripts/echo-version ./package.json)",
     "test": "jest --maxWorkers=4 ",
     "ci-test": "jest --maxWorkers=4 --coverage --coverageReporters=lcov && ./node_modules/.bin/codecov",
     "test:cov": "jest --coverage",
