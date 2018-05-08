@@ -1,31 +1,30 @@
 dist: trusty
 language: node_js
-node_js:  "8"
-
+node_js: '8'
 addons:
   chrome: stable
-
 notifications:
   email: false
   slack:
     rooms:
       secure: F352vjEmgozSquQY/s7q1SglmprpNx8FewU12MFpekDb+l+LqUCdpwoMjhkP8UmPregApYvBP8LHDGFvlXjrh9CqyLuq0S8iypWIsX8df+dOYdpcBu1RBkLW9lqLPH/HDH4kVQAcFeiIpGE6KcYbMK6ozCCIMlfFSZtqQMbzNdVOd+GsXT6or5eZnnvnqMl1Qdpw509AfyT4ryb8qr9UIuqKBiGxogqTtiREUVQiALFIiXhLo8QjniQtdYfMEykBPw5KNiE1ZycwODpkJvhviHrzNyC9uU2HY7r4owxvUnz4sSloakVZAo7J4QrraoK+RYszm0kmBvcy8dHP6YPDUhLUVlj0cKRdUBqI4Rr49zpadbQ0aTVMwOr3rJ5oDfozxe3TaH7nMF/Vi6Z0ZuAI+AmtQAx/Ely10NIAR9FQrMjZnNFH+GVTVRmt9eL3algILOGvtSu490WmzuhZvdH1TD1Wh8EUq0u8Mg/yrFzKNEDajza9FDaqzYK0fI63FYqlUUYUeVTY7ci233MQbRE+UNGvE66dS+CGksi9aJMahaR44fU/VeCgItPDtSR8SBoyA5XvwWOrIwICP7fsCYETWEKuWpSkecPpOlv93y6jXKwRAfDTgk/mFXI3tGfZgI3JAqCtIOLiV+abURY3Vi0pLn4QlHgVJcTM2cG7i16zDJM=
-
 services:
-  - docker
-
+- docker
 before_script:
-  - yarn global add lerna 
-  - lerna bootstrap
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-
+- yarn global add lerna
+- lerna bootstrap
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 script:
- - lerna run ci-test
- - lerna run ci-e2e
- - lerna run tslint
- - yarn build
-
+- lerna run ci-test
+- lerna run ci-e2e
+- lerna run tslint
+- yarn build
 after_success:
- - docker pull node:carbon
- - yarn docker
- - yarn deploy
+- docker pull node:carbon
+- yarn docker
+- yarn deploy
+- yarn deploynow
+- yarn lighthouse
+env:
+  global:
+    secure: FRI/ZkaJayJrgwQvlH37SOhbny+xjv1DgQNGvYpHJV0LcNgYUes/nNXRtmIrDy0jvtiZz5iWZrCU1U67+SLL1ijcPHCWBQJTg8Is9in04IRERuZxCFo/EkvIZyJWYe/B7hyVbxEybj99M2qagKgTdXLoxfJA/plqbfahtBprL2CjyH0sCoSPbdvDdRHEdOIlfrkGeAd/489nL+2Gs79fPAMiDynaeyfkx9GUH9vcA+AtVa29T665/YvzZG+c29uAHRuojlq1qXb5SQy5yc3S8gyr5XPyatcwJUsyaEibcASWMQjpq+DUNKjC1oruuL5Cofjilj9hN9f0aJ+5CIGkXzKny4zkTg0DeGWAdMLFlCAZxCJr1jwNZFzf7wJoSFg+kvAr5N2/C/Y/5AY7C90UZcxMOx+Kjfgccaat2jDFigJX3LKm643mzYiXdyg3/Ll3P++Ogy+OqnXfd3FX4RzYiO5O7mmbBiOnlTruJaSuvJXr808EDhyofKLIxmk1BPkosduJTMoRjt2tKapA7PM13SEofBcdcFe+3Pm/qTuuNvX+FoJZJi1VoLj5W6d70pJPplHDKueIsZWX16TpHRAG7jG1czpcoJMapiqQXZ9aYyrT78oi4Wb6dd81AUBfMBFxnsgskXPW7H125Nffg2FVHktDiyLtCXsaJm7fKOzwSio=
