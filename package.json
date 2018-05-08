@@ -1,16 +1,19 @@
 {
 	"devDependencies": {
 		"lerna": "^2.11.0",
+		"lighthouse-ci": "https://github.com/ebidel/lighthouse-ci",
 		"now": "^11.1.7"
 	},
 	"scripts": {
 		"build": "lerna run build",
 		"docker": "lerna run docker",
 		"deploy": "lerna run deploy",
-		"deploynow": "now alias --token=$NOW_TOKEN $(now --docker --token=$NOW_TOKEN --public --no-verify) my-special-way"
+		"deploynow": "now alias --token=$NOW_TOKEN $(now --docker --token=$NOW_TOKEN --public --no-verify) my-special-way",
+		"lighthouse": "lighthouse-ci https://my-special-way.now.sh"
+
 	},
 	"now": {
 		"name": "msw",
 		"alias": "my-special-way"
-		}
+	}
 }
